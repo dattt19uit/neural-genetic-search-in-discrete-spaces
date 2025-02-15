@@ -279,20 +279,6 @@ def run(args):
         for _output, _attack, _decoded, batch_prompt_mask in zip(
             batch_outputs, batch_attacks, batch_decoded_attacks, batch_prompt_masks
         ):
-            # pad_mask = (_attack == tokenizer.eos_token_id).cumsum(1) > 1
-            # batch_mask = torch.cat([batch_prompt_mask, (~pad_mask).long()], 1)
-            # with torch.no_grad():
-            #     lora_to_base(model)
-            #     logits = model(input_ids=_output,
-            #                    attention_mask=batch_mask).logits
-            #     base_to_lora(model)
-
-            #     logits = logits[:, prompt_len-1:-1]
-            #     _log_probs = F.log_softmax(logits, -1)
-            #     _log_probs = torch.gather(
-            #         _log_probs, 2, _attack.unsqueeze(2)).squeeze(2)
-            #     _log_probs = _log_probs.masked_fill(pad_mask, 0.0)
-            #     _log_probs = torch.sum(_log_probs, 1).cpu()
             _log_probs = torch.zeros(_output.size(0))
 
             victim_prompts = [prompt_fn(x, victim_tokenizer) for x in _decoded]
@@ -427,7 +413,7 @@ if __name__ == "__main__":
     parser.add_argument("--max_len", type=int, default=20)
     parser.add_argument("--victim_name", type=str, required=True)
     parser.add_argument("--classifier", type=str, default="llama")
-    parser.add_argument("--llama_guard_version", type=int, default=1)
+    parser.add_argument("--llama_guard_version", type=int, default=3)
     parser.add_argument("--num_samples", type=int, default=1024)
     parser.add_argument("--batch_size", type=int, default=256)
     parser.add_argument("--victim_batch_size", type=int, default=16)

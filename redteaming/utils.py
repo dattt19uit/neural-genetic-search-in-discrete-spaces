@@ -34,12 +34,12 @@ MODELS = {
     "gemma-2-9b": "google/gemma-2-9b-it",
     "llama": "meta-llama/Llama-2-7b-chat-hf",
     "llama-13b": "meta-llama/Llama-2-13b-chat-hf",
-    "llama-3": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+    "llama-3.1": "meta-llama/Meta-Llama-3.1-8B-Instruct",
     "llama-3.2": "meta-llama/Llama-3.2-3B-Instruct",
     "qwen": "Qwen/Qwen2.5-7B-Instruct",
     "mistral": "mistralai/Ministral-8B-Instruct-2410",
     "phi-3.5": "microsoft/phi-3.5-mini-instruct",  # 4B
-    "phi-4": "microsoft/phi-4",  # 15B
+    "phi-4": "microsoft/phi-4",  # 14B
     "gemma-2-27b": "google/gemma-2-27b-it",
     "llama-3.3": "meta-llama/Llama-3.3-70B-Instruct",
     "qwen-72b": "Qwen/Qwen2.5-72B-Instruct",
