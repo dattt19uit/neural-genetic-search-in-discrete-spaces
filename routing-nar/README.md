@@ -52,5 +52,5 @@ where, `{problem}` can be "tsp" or "cvrp", and `{scale}`, `{seed}`, `{device}`, 
 
 
 ## References
-[1] Kim, Minsu, et al. "Ant colony sampling with gflownets for combinatorial optimization." arXiv preprint arXiv:2403.07041 (2024).
-[2] Berto, Federico, et al. "Rl4co: an extensive reinforcement learning for combinatorial optimization benchmark." arXiv preprint arXiv:2306.17100 (2023).
+[1] Kim, Minsu, et al. "Ant colony sampling with gflownets for combinatorial optimization." arXiv preprint arXiv:2403.07041 (2024).  
+[2] Berto, Federico, et al. "Rl4co: an extensive reinforcement learning for combinatorial optimization benchmark." arXiv preprint arXiv:2306.17100 (2023).  
