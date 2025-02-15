@@ -423,10 +423,10 @@ if __name__ == "__main__":
     parser.add_argument("--debug", action="store_true")
 
     ### NGS ###
-    parser.add_argument("--n_pop", type=int, default=128)
+    parser.add_argument("--n_pop", type=int, default=256)
     parser.add_argument("--n_off", type=int, default=16)
     parser.add_argument("--n_parents", type=int, default=2)
-    parser.add_argument("--mutation_rate", type=float, default=0.01)
+    parser.add_argument("--mutation_rate", type=float, default=0.05)
     parser.add_argument("--rank_coef", type=float, default=0.01)
     parser.add_argument("--novelty_rank_weight", type=float, default=0.1)
     parser.add_argument("--delta", type=float, default=0.95)

@@ -11,9 +11,9 @@ else
 fi
 
 # NGS
-N_POP=128
-N_OFF=32
-MU=0.1
+N_POP=256
+N_OFF=16
+MU=0.05
 python eval.py \
     --ckpt save/${CKPT}/latest \
     --victim_name $TARGET_VICTIM \
