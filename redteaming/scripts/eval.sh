@@ -14,9 +14,9 @@ fi
 N_POP=128
 N_OFF=32
 MU=0.1
-python eval_final.py \
+python eval.py \
     --ckpt save/${CKPT}/latest \
-    --victim_model $TARGET_VICTIM \
+    --victim_name $TARGET_VICTIM \
     --no_lora \
     --seed $SEED \
     --gpu_util $GPUUTIL \
@@ -26,9 +26,9 @@ python eval_final.py \
     --mutation_rate $MU;
 
 # Sampling (Best-of-N)
-python eval_final.py \
+python eval.py \
     --ckpt save/${CKPT}/latest \
-    --victim_model $TARGET_VICTIM \
+    --victim_name $TARGET_VICTIM \
     --no_lora \
     --seed $SEED \
     --gpu_util $GPUUTIL \
@@ -36,9 +36,9 @@ python eval_final.py \
 
 # Tempered
 TEMP=0.8
-python eval_final.py \
+python eval.py \
     --ckpt save/${CKPT}/latest \
-    --victim_model $TARGET_VICTIM \
+    --victim_name $TARGET_VICTIM \
     --no_lora \
     --seed $SEED \
     --gpu_util $GPUUTIL \
@@ -46,9 +46,9 @@ python eval_final.py \
     --temp $TEMP;
 
 TEMP=0.5
-python eval_final.py \
+python eval.py \
     --ckpt save/${CKPT}/latest \
-    --victim_model $TARGET_VICTIM \
+    --victim_name $TARGET_VICTIM \
     --no_lora \
     --seed $SEED \
     --gpu_util $GPUUTIL \
@@ -57,9 +57,9 @@ python eval_final.py \
 
 # Top-k
 TOPK=10
-python eval_final.py \
+python eval.py \
     --ckpt save/${CKPT}/latest \
-    --victim_model $TARGET_VICTIM \
+    --victim_name $TARGET_VICTIM \
     --no_lora \
     --seed $SEED \
     --gpu_util $GPUUTIL \
@@ -67,9 +67,9 @@ python eval_final.py \
     --top_k $TOPK;
 
 TOPK=5
-python eval_final.py \
+python eval.py \
     --ckpt save/${CKPT}/latest \
-    --victim_model $TARGET_VICTIM \
+    --victim_name $TARGET_VICTIM \
     --no_lora \
     --seed $SEED \
     --gpu_util $GPUUTIL \
@@ -78,9 +78,9 @@ python eval_final.py \
 
 # Top-p
 TOPP=0.8
-python eval_final.py \
+python eval.py \
     --ckpt save/${CKPT}/latest \
-    --victim_model $TARGET_VICTIM \
+    --victim_name $TARGET_VICTIM \
     --no_lora \
     --seed $SEED \
     --gpu_util $GPUUTIL \
@@ -88,9 +88,9 @@ python eval_final.py \
     --top_p $TOPP;
 
 TOPP=0.5
-python eval_final.py \
+python eval.py \
     --ckpt save/${CKPT}/latest \
-    --victim_model $TARGET_VICTIM \
+    --victim_name $TARGET_VICTIM \
     --no_lora \
     --seed $SEED \
     --gpu_util $GPUUTIL \
@@ -99,9 +99,9 @@ python eval_final.py \
 
 # Beam search
 BEAMSIZE=4
-python eval_final.py \
+python eval.py \
     --ckpt save/${CKPT}/latest \
-    --victim_model $TARGET_VICTIM \
+    --victim_name $TARGET_VICTIM \
     --no_lora \
     --seed $SEED \
     --gpu_util $GPUUTIL \
@@ -109,9 +109,9 @@ python eval_final.py \
     --beam_size $BEAMSIZE;
 
 BEAMSIZE=8
-python eval_final.py \
+python eval.py \
     --ckpt save/${CKPT}/latest \
-    --victim_model $TARGET_VICTIM \
+    --victim_name $TARGET_VICTIM \
     --no_lora \
     --seed $SEED \
     --gpu_util $GPUUTIL \

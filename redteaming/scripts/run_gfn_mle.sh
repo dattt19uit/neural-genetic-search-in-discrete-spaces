@@ -5,7 +5,7 @@ EXP_NAME=${SOURCE_VICTIM}-gfn
 python main.py \
 --exp_name $EXP_NAME \
 --sim_tolerance 0.3 \
---victim_model $SOURCE_VICTIM \
+--victim_name $SOURCE_VICTIM \
 --lr 1e-4 \
 --reward_sched_horizon 1000 \
 --train_steps 5000 \
@@ -23,7 +23,7 @@ python main.py \
 
 python eval.py \
 --ckpt save/${EXP_NAME}/latest \
---victim_model $SOURCE_VICTIM \
+--victim_name $SOURCE_VICTIM \
 --no_lora
 
 python collect_samples.py --exp_name $EXP_NAME
@@ -44,5 +44,5 @@ python main.py \
 
 python eval.py \
 --ckpt save/${DISTILLATION_EXP_NAME}/latest \
---victim_model $SOURCE_VICTIM \
+--victim_name $SOURCE_VICTIM \
 --no_lora
