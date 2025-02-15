@@ -1,0 +1,5 @@
+__pycache__/
+slurm_logs/
+logs/
+wandb/
+save/
