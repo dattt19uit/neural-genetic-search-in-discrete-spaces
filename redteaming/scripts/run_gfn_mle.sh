@@ -34,7 +34,7 @@ python main.py \
 --mode distillation \
 --exp_name $DISTILLATION_EXP_NAME \
 --lr 1e-4 \
---seed $SEED \
+--seed 42 \
 --batch_size 1024 \
 --train_steps 1000 \
 --grad_acc_steps 8 \
