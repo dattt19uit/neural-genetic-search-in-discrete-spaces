@@ -1,0 +1,35 @@
+need to wait several minutes
+need to wait several minutes
+Model initialized, starting training...
+Downloading Oracle...
+ 28%|██████████████████████████████████▋                                                                                       | 2.58M/9.05M [00:01<00:01, 3.41MiB/s]
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 9.05M/9.05M [00:01<00:00, 5.02MiB/s]
+Done!
+200/10000 | avg_top1: 0.948 | avg_top10: 0.920 | avg_top100: 0.831 | avg_sa: 3.038 | div: 0.873
+300/10000 | avg_top1: 0.948 | avg_top10: 0.942 | avg_top100: 0.874 | avg_sa: 2.839 | div: 0.868
+400/10000 | avg_top1: 0.948 | avg_top10: 0.945 | avg_top100: 0.895 | avg_sa: 2.773 | div: 0.867
+500/10000 | avg_top1: 0.948 | avg_top10: 0.945 | avg_top100: 0.910 | avg_sa: 2.693 | div: 0.857
+600/10000 | avg_top1: 0.948 | avg_top10: 0.946 | avg_top100: 0.922 | avg_sa: 2.597 | div: 0.852
+700/10000 | avg_top1: 0.948 | avg_top10: 0.947 | avg_top100: 0.930 | avg_sa: 2.531 | div: 0.846
+800/10000 | avg_top1: 0.948 | avg_top10: 0.947 | avg_top100: 0.934 | avg_sa: 2.498 | div: 0.844
+900/10000 | avg_top1: 0.948 | avg_top10: 0.947 | avg_top100: 0.936 | avg_sa: 2.489 | div: 0.840
+Traceback (most recent call last):
+  File "run.py", line 128, in <module>
+    main()
+  File "run.py", line 94, in main
+    optimizer.optimize(oracle=oracle, config=config_default, seed=seed)
+  File "/home/silab9/new/ngs/molecuar_design/main/optimizer.py", line 377, in optimize
+    if self.args.log_results:
+  File "/home/silab9/new/ngs/molecuar_design/main/ngs/run.py", line 146, in _optimize
+    exp_agent_likelihood, _ = Agent.likelihood(exp_seqs.long())
+  File "/home/silab9/new/ngs/molecuar_design/main/ngs/model.py", line 64, in likelihood
+    logits, h = self.rnn(x[:, step], h)
+  File "/home/silab9/anaconda3/envs/symrd/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/silab9/new/ngs/molecuar_design/main/ngs/model.py", line 26, in forward
+    x = self.linear(x)
+  File "/home/silab9/anaconda3/envs/symrd/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/silab9/anaconda3/envs/symrd/lib/python3.7/site-packages/torch/nn/modules/linear.py", line 114, in forward
+    return F.linear(input, self.weight, self.bias)
+KeyboardInterrupt
