@@ -7,7 +7,7 @@ The codes are implemented our code based on the practical molecular optimization
 
 - [Sample Efficiency Matters: A Benchmark for Practical Molecular Optimization (NeurIPS, 2022)](https://arxiv.org/abs/2206.12411)
 (code: https://github.com/wenhao-gao/mol_opt)
-- [GGenetic-guided GFlowNets for Sample Efficient Molecular Optimization (NeurIPS, 2024)](https://proceedings.neurips.cc/paper_files/paper/2024/hash/4b25c000967af9036fb9b207b198a626-Abstract-Conference.html)
+- [Genetic-guided GFlowNets for Sample Efficient Molecular Optimization (NeurIPS, 2024)](https://proceedings.neurips.cc/paper_files/paper/2024/hash/4b25c000967af9036fb9b207b198a626-Abstract-Conference.html)
 (code: https://github.com/hyeonahkimm/genetic_gfn)
 
 
