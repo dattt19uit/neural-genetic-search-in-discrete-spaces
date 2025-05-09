@@ -1,9 +1,7 @@
-# Genetic-guided GFlowNets
+# Sample Efficient Molecular Design
 
-This repository provided implemented codes for the paper -- Genetic GFlowNets: Advancing in Practical Molecular Optimization Benchmark. 
-> 
 
-The codes are implemented our code based on the practical molecular optimization benchmark and Genetic-guided GFlowNets.
+The codes are implemented our code based on the practical molecular optimization (PMO) benchmark and Genetic-guided GFlowNets.
 
 - [Sample Efficiency Matters: A Benchmark for Practical Molecular Optimization (NeurIPS, 2022)](https://arxiv.org/abs/2206.12411)
 (code: https://github.com/wenhao-gao/mol_opt)
