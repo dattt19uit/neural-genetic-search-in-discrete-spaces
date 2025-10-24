@@ -71,7 +71,7 @@ def local_search(
     if distances is None:
         distances_np = get_distance_matrix(td["locs"]).numpy()
     else:
-        distances_np = distances.detach().cpu().numpy()
+        distances_np = distances.detach().cpu().float().numpy()
 
     subroutes_all: List[List[List[int]]] = [get_subroutes(path) for path in actions_np]
     with concurrent.futures.ThreadPoolExecutor() as executor:
