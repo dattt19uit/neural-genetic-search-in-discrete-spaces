@@ -166,10 +166,11 @@ if __name__ == "__main__":
     parser.add_argument("--seed", type=int, default=0, choices=range(5))
     parser.add_argument("--exp_name", type=str, default="default", help="Experience name")
     parser.add_argument("--device", type=int, default=None, help="Device")
+    parser.add_argument("--iter", type=int, default=100, help="iter")
     args = parser.parse_args()
 
     is_train = args.mode == "train"
-    test_n_iter = 100 if not is_train else 10
+    test_n_iter = args.iter if not is_train else 10
     if is_train:
         assert args.method is None
         args.method = "aco"  # Use GFACS for training
