@@ -103,7 +103,7 @@ def get_model(
                 {
                     "use_local_search": True,
                     "use_nls": True,
-                    "local_search_params": {"max_iterations": tsp_max_iterations, "num_threads": 32},
+                    "local_search_params": {"max_iterations": tsp_max_iterations, "num_threads": 4},
                     "n_perturbations": tsp_n_perturbations,
                     "perturbation_params": {"max_iterations": 20, "num_threads": 32},
                 }
