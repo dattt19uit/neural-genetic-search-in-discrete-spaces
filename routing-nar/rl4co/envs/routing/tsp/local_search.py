@@ -37,7 +37,8 @@ def local_search(
     distances_np = distances_np + 1e9 * np.eye(distances_np.shape[1], dtype=np.float32)[None, :, :]
 
     actions_np = actions.detach().cpu().numpy().astype(np.uint16)
-    set_num_threads(num_threads or min(os.cpu_count(), 32))
+    # set_num_threads(num_threads or min(os.cpu_count(), 32))
+    set_num_threads(4)
     numba_results = _two_opt_python(distances_np, actions_np, max_iterations)
     return torch.from_numpy(numba_results.astype(np.int64)).to(actions.device)
 
