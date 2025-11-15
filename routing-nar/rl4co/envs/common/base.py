@@ -330,9 +330,8 @@ class RL4COEnvBase(EnvBase, metaclass=abc.ABCMeta):
         """
         self.__dict__.update(state)
         self.rng = torch.manual_seed(0)
-        rng_state = state["rng"]
+        # self.rng.set_state(state["rng"])
 
-        # Nếu rng_state không phải ByteTensor thì convert
         if not isinstance(rng_state, torch.ByteTensor):
             rng_state = torch.tensor(rng_state, dtype=torch.uint8)
 
