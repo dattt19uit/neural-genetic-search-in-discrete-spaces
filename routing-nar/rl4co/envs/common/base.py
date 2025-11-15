@@ -332,13 +332,8 @@ class RL4COEnvBase(EnvBase, metaclass=abc.ABCMeta):
         self.rng = torch.manual_seed(0)
         # self.rng.set_state(state["rng"])
 
-        rng_state = state["rng"]
-
-        # Nếu rng_state không phải ByteTensor thì convert
-        if not isinstance(rng_state, torch.ByteTensor):
-            rng_state = torch.tensor(rng_state, dtype=torch.uint8)
-
-        self.rng.set_state(rng_state)
+        self.rng = torch.Generator()
+        self.rng.manual_seed(0)
 
 
 
