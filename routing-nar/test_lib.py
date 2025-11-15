@@ -142,7 +142,12 @@ if __name__ == "__main__":
     elif len(os.listdir(ckpt_dir)) > 1:
         raise Exception("Multiple checkpoints found!")
 
-    ckpt_model = GFACS.load_from_checkpoint(os.path.join(ckpt_dir, os.listdir(ckpt_dir)[0]))
+    # ckpt_model = GFACS.load_from_checkpoint(os.path.join(ckpt_dir, os.listdir(ckpt_dir)[0]))
+    ckpt_model = GFACS.load_from_checkpoint(
+        os.path.join(ckpt_dir, os.listdir(ckpt_dir)[0]),
+        map_location=lambda storage, loc: storage.cuda(0)
+    )
+
     ckpt = ckpt_model.policy.state_dict()
 
     device = "cpu" if args.device is None else f"cuda:{args.device}"
